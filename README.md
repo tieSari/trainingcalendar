@@ -1,4 +1,4 @@
-#Trainingcalendar 
+# Trainingcalendar 
 
 Training calendar on React-sovellus, jolla voi pitää kirjaa erilaisista treeneistä helposti. Kalenterista voi valita viikko- tai kk-näkymän. Treeneihin käytettyjä aikoja tai kertoja voi summata viikko-, kk- tai vuositasolla treenityypeittäin. Esim. juoksutreenit/kuntosalitreenit/uinti. Käyttäjä voi lisätä itse erilaisia treenityyppejä.
 -----------------------------------------------------------
