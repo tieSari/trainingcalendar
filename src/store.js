@@ -7,16 +7,16 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 //import filterReducer  from './reducers/filterReducer'
 
 const reducer = combineReducers({
-  //anecdote: anecdoteReducer,
-  //notification: notificationReducer,
-  //filter: filterReducer
+    //anecdote: anecdoteReducer,
+    //notification: notificationReducer,
+    //filter: filterReducer
 })
 
 const store = createStore(
-  reducer,
-  composeWithDevTools(
-    applyMiddleware(thunk)
-  )
+    reducer,
+    composeWithDevTools(
+        applyMiddleware(thunk)
+    )
 )
 
 export default store

@@ -1,25 +1,24 @@
-//import AnecdoteForm from './components/AnecdoteForm'
-//import AnecdoteList from './components/AnecdoteList'
-//import Filter from './components/Filter'
 import React from 'react'
-import { connect } from 'react-redux'
+import MaterialDatePicker from './components/MaterialDatePicker'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+
 //import { anecdotesInitialization }  from './reducers/anecdoteReducer'
 
-class App extends React.Component {
-  componentDidMount =  () => {
-  //  this.props.anecdotesInitialization()
-  }
+class App extends React.Component {  
 
-  render() {
-      return (
-          <div>
-              <h1>Training Diary</h1>
-          </div>
-      )
-  }
+    render() {
+        return (
+            <div>
+                <h1>Training Diary</h1>
+                <div>
+                    <MuiThemeProvider>
+                        <MaterialDatePicker/>
+                    </MuiThemeProvider>
+                </div>
+            </div>
+
+        )
+    }
 }
 
-export default connect(
-    null,
-//  { anecdotesInitialization }
-)(App)
+export default App
