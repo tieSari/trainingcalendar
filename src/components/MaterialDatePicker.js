@@ -11,7 +11,7 @@ class TrainingDatePicker extends React.Component {
         
         return (
             <div>
-                <DatePicker hintText="TrainingCalendar" container="inline" mode="landscape" onChange={() => this.props.dateEntryCreation()} />
+                <DatePicker hintText="TrainingCalendar" container="inline" mode="landscape" onChange={() => this.props.dateEntryCreation} />
             </div>
         )
     }

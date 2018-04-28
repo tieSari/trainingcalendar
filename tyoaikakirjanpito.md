@@ -7,3 +7,4 @@
 | 29.3. | 1    | rekisteröinti ja readme:n kirjoitus |
 | 07.4. | 1    | reduxin kilkkeiden lisäys, suunnittelua | 
 | 21.4. | 3    | lisätty connect ja reducer | 
+| 28.4. | 4    | vaihdettu materia.ui:n kalenteri omaan, lisätty bootstrap | 

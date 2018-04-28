@@ -1,19 +1,22 @@
 import React from 'react'
-import MaterialDatePicker from './components/MaterialDatePicker'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+//import MaterialDatePicker from './components/MaterialDatePicker'
+//import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import DateEntryList from './components/DateEntryList'
+import { connect } from 'react-redux'
+import { initializeDateEntries }  from './reducers/DateReducer'
 
-//import { anecdotesInitialization }  from './reducers/anecdoteReducer'
-
-class App extends React.Component {  
+class App extends React.Component {
+    componentWillMount()
+    {
+        this.props.initializeDateEntries()
+    }  
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1>Training Diary</h1>
                 <div>
-                    <MuiThemeProvider>
-                        <MaterialDatePicker/>
-                    </MuiThemeProvider>
+                    <DateEntryList/>
                 </div>
             </div>
 
@@ -21,4 +24,7 @@ class App extends React.Component {
     }
 }
 
-export default App
+export default connect(
+    null,
+    { initializeDateEntries }
+)(App)
