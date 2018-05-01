@@ -1,10 +1,10 @@
 const initalState = [
-    { weekday: 'Monday',  id: 1 },
+    { weekday: 'Monday',  id: 1, trainingItem:{type: 'juoksu', time: 60, dayId:1, week:20, year:2018}},
     { weekday: 'Tuesday', id: 2 },
     { weekday: 'Wednesday',  id: 3 },
     { weekday: 'Thursday',  id: 4 },
     { weekday: 'Friday',  id: 5 },
-    { weekday: 'Saturday',  id: 6 },
+    { weekday: 'Saturday',  id: 6, trainingItem:{type: 'juoksu', time: 60, dayId:6, week:20, year:2018}},
     { weekday: 'Sunday',  id: 7 },
 ]
   
@@ -32,11 +32,11 @@ export const initializeDateEntries = () => {
     }
 }
 
-export const dateEntryCreation = (weekday) => {
+export const dateEntryCreation = (item) => {
     return {
         type: 'NEW_ENTRY',
         data: {
-            weekday,
+            item,
             id: generateId()
         }
     }

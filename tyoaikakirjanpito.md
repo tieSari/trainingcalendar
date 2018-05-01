@@ -8,3 +8,4 @@
 | 07.4. | 1    | reduxin kilkkeiden lisäys, suunnittelua | 
 | 21.4. | 3    | lisätty connect ja reducer | 
 | 28.4. | 4    | vaihdettu materia.ui:n kalenteri omaan, lisätty bootstrap | 
+| 01.5. | 2    | lisätty TrainingEntry |

@@ -7,8 +7,6 @@ import dateReducer  from './reducers/DateReducer'
 
 const reducer = combineReducers({
     dateEntries: dateReducer
-    //notification: notificationReducer,
-    //filter: filterReducer
 })
 
 const store = createStore(

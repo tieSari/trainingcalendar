@@ -2,6 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import DateEntry from './DateEntry'
 import { Table } from 'react-bootstrap'
+import { dateEntryCreation } from './../reducers/DateReducer'
+import TrainingItem from './TrainingItem' 
 
 const DateEntryList = (props) => (
     <div>
@@ -14,6 +16,9 @@ const DateEntryList = (props) => (
                                 key = {entry.id}
                                 dateEntry={entry}
                             />
+                            <TrainingItem 
+                                item={entry.trainingItem}
+                                onSubmit={() => props.dateEntryCreation(entry)}/>
                         </td>
                     )}                   
                 </tr>
@@ -31,5 +36,5 @@ const mapStateToProps = (state) => {
 
 export default connect(
     mapStateToProps,
-    { }
+    {dateEntryCreation }
 )(DateEntryList)

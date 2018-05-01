@@ -1,16 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-//import { createStore, combineReducers } from 'redux'
 import App from './App'
 import { Provider } from 'react-redux'
-//import dateReducer from './reducers/DateReducer'
 import store from './store'
 
-//const reducer = combineReducers({
-//    dates: dateReducer
-//})
-  
-//const store = createStore(reducer)
 
 ReactDOM.render(
     <Provider store={store}>
