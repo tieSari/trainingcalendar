@@ -1,9 +1,17 @@
 import React from 'react'
 
 const DateEntry = ({ dateEntry }) => {
+    if(dateEntry.current === true)
+    {
+        return (
+            <div>
+                <strong> {dateEntry.weekday} </strong>
+            </div>
+        )
+    }
     return (
         <div>
-            <strong> {dateEntry.weekday} </strong>
+            {dateEntry.weekday}
         </div>
     )
 }

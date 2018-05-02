@@ -9,7 +9,7 @@ const DateEntryList = (props) => (
     <div>
         <Table striped>
             <tbody>
-                <tr>                  
+                <tr >                  
                     {props.dateEntries.map(entry =>
                         <td>
                             <DateEntry
