@@ -14,6 +14,14 @@ const dateReducer = (state = initalState, action) => {
     switch (action.type) {
     case 'NEW_ENTRY':
         return [...state, action.data]
+    case 'UPDATE_CURRENT':
+    {
+        const currentEntry = state.find(d => d.current === true)
+        console.log(currentEntry)
+        const changedEntry = {...currentEntry, trainingItem : {...currentEntry.trainingItem, type : action.data}}
+        console.log(changedEntry)
+        return state.map(entry => entry.current === false ? entry : changedEntry )
+    }
     case 'INIT_ENTRIES':
     // return action.data
     {
@@ -31,6 +39,15 @@ const dateReducer = (state = initalState, action) => {
 
 const generateId = () => Number((Math.random() * 1000000).toFixed(0))
  
+export const updateCurrentEntry = (trainingType) => {
+    return async (dispatch) => {
+        dispatch({
+            type: 'UPDATE_CURRENT',
+            data: trainingType
+        })
+    }
+}
+
 export const initializeDateEntries = () => {
     return async (dispatch) => {
         // const notes = await noteService.getAll()

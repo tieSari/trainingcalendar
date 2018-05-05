@@ -11,7 +11,7 @@ const DateEntryList = (props) => (
             <tbody>
                 <tr >                  
                     {props.dateEntries.map(entry =>
-                        <td>
+                        <td key={entry.id}>
                             <DateEntry
                                 key = {entry.id}
                                 dateEntry={entry}

@@ -2,12 +2,11 @@ import React from 'react'
 
 const TrainingItem = ({ item, addTrainingItem }) => {
 
-    //  if(item != null)
     return (
         <div>
             <form onSubmit={addTrainingItem}>
-                <input name="type" placeholder={item != null && item.type} />
-                <input name="time" placeholder={item != null && item.time} />
+                <input name="type" value={item != null && item.type} readOnly />
+                <input name="time" value={item != null && item.time} readOnly />
                 <button>Save</button>
             </form>
         </div>

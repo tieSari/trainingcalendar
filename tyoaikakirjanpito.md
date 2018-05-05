@@ -10,3 +10,5 @@
 | 28.4. | 4    | vaihdettu materia.ui:n kalenteri omaan, lisätty bootstrap | 
 | 01.5. | 2    | lisätty TrainingEntry |
 | 02.5. | 2    | lisätty CurrentDayn käsittely |
+| 04.5. | 2    | lisätty ActionButtonit |
+| 05.5. | 2    | fixattu punaiset varoitukset pois konsolilta |
