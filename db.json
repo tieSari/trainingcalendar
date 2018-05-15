@@ -1,0 +1,13 @@
+{
+  "entries":
+  [
+    {"type": "juoksu", 
+      "time": 60, "dayId":1, 
+      "week":20, "year":2018},
+      
+      {"type": "juoksu", 
+        "time": 60, "dayId":2, 
+        "week":20, "year":2018}
+    ]
+    
+  }

@@ -6,8 +6,9 @@ import { initializeDateEntries }  from './reducers/DateReducer'
 import { initializeActionEntries }  from './reducers/ActionReducer'
 import { Grid, Col, Row } from 'react-bootstrap'
 
+
 class App extends React.Component {
-    componentWillMount()
+    componentDidMount()
     {
         this.props.initializeDateEntries()
         this.props.initializeActionEntries()

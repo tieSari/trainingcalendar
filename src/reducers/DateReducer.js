@@ -1,11 +1,13 @@
+import entryService from '../services/DateEntryService'
+
 const initalState = [
-    { weekday: 'Monday',  id: 1, current: false, trainingItem:{type: 'juoksu', time: 60, dayId:1, week:20, year:2018}},
-    { weekday: 'Tuesday', id: 2, current: false},
-    { weekday: 'Wednesday',  id: 3, current: false },
-    { weekday: 'Thursday',  id: 4, current: false },
-    { weekday: 'Friday',  id: 5, current: false },
-    { weekday: 'Saturday',  id: 6, current: false, trainingItem:{type: 'juoksu', time: 60, dayId:6, week:20, year:2018}},
-    { weekday: 'Sunday',  id: 0, current: false },
+    { weekday: 'Monday',  id: 1, current: false, trainingItem:{}},
+    { weekday: 'Tuesday', id: 2, current: false, trainingItem:{}},
+    { weekday: 'Wednesday',  id: 3, current: false, trainingItem:{} },
+    { weekday: 'Thursday',  id: 4, current: false, trainingItem:{} },
+    { weekday: 'Friday',  id: 5, current: false, trainingItem:{} },
+    { weekday: 'Saturday',  id: 6, current: false, trainingItem:{}},
+    { weekday: 'Sunday',  id: 0, current: false, trainingItem:{} },
 ]
 
 const today =  new Date().getDay()
@@ -50,10 +52,10 @@ export const updateCurrentEntry = (trainingType) => {
 
 export const initializeDateEntries = () => {
     return async (dispatch) => {
-        // const notes = await noteService.getAll()
+        const entries = await entryService.getAll()
         dispatch({
             type: 'INIT_ENTRIES',
-            data: initalState
+            data: initalState.map(day => day.trainingItem = entries.filter(p => p.dayId == day.id))
         })
     }
 }
