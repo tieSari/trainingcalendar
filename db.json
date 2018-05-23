@@ -1,13 +1,44 @@
 {
-  "entries":
-  [
-    {"type": "juoksu", 
-      "time": 60, "dayId":1, 
-      "week":20, "year":2018},
-      
-      {"type": "juoksu", 
-        "time": 60, "dayId":2, 
-        "week":20, "year":2018}
-    ]
-    
-  }
+  "entries": [
+    {
+      "type": "Gym",
+      "time": "0",
+      "id": 1,
+      "dayId": 1,
+      "week": 20,
+      "year": 2018
+    },
+    {
+      "type": "Orienteering",
+      "time": "0",
+      "dayId": 1,
+      "week": 20,
+      "year": 2018,
+      "id": 2
+    },
+    {
+      "type": "Spinning",
+      "time": "0",
+      "dayId": 1,
+      "week": 20,
+      "year": 2018,
+      "id": 3
+    },
+    {
+      "type": "Spinning",
+      "time": "0",
+      "dayId": 1,
+      "week": 20,
+      "year": 2018,
+      "id": 4
+    },
+    {
+      "type": "Running",
+      "time": "0",
+      "dayId": 1,
+      "week": 20,
+      "year": 2018,
+      "id": 5
+    }
+  ]
+}

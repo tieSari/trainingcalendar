@@ -14,3 +14,4 @@
 | 05.5. | 2    | fixattu punaiset varoitukset pois konsolilta |
 | 14.5. | 1    | db.json lisäys |
 | 15.5. | 1    | tietokannasta haku |
+| 23.5. | 3    | training entryjen lisäys kantaan |
