@@ -22,7 +22,6 @@ const actionReducer = (state = initalState, action) => {
  
 export const initializeActionEntries = () => {
     return async (dispatch) => {
-        // const notes = await noteService.getAll()
         dispatch({
             type: 'INIT_ENTRIES',
             data: initalState
@@ -31,6 +30,7 @@ export const initializeActionEntries = () => {
 }
 
 export const actionEntryCreation = (item) => {
+    console.log({item}, 'new action item')
     return {
         type: 'NEW_ENTRY',
         data: {

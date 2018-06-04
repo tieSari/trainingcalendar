@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import DateEntry from './DateEntry'
 import { Table } from 'react-bootstrap'
-import { dateEntryCreation } from './../reducers/DateReducer'
+import { dateEntryCreation, updateCurrentEntry, deleteCurrentEntry } from './../reducers/DateReducer'
 import TrainingItem from './TrainingItem' 
 //import RenderToLayer from 'material-ui/internal/RenderToLayer'
 
@@ -12,12 +12,26 @@ class DateEntryList extends React.Component {
     addItem = async (event) => {
         
         event.preventDefault()
-        const type = event.target.type.value
-        console.log(type)
-        const time = event.target.time.value
-        const item = {type:type, time:time}
-        console.log(item)
-        this.props.dateEntryCreation(item)
+        const currentEntry = this.props.dateEntries.find(d => d.current === true)
+        console.log({currentEntry}, 'currentEntry in addItem')
+        if(currentEntry.trainingItem.id)
+        {
+            this.props.updateCurrentEntry(currentEntry.trainingItem)
+        }
+        else
+        {
+            this.props.dateEntryCreation(currentEntry.trainingItem)
+        }
+     
+    }
+    deleteItem = async (event) => {
+        
+        event.preventDefault()
+        const currentEntry = this.props.dateEntries.find(d => d.current === true)
+        if(currentEntry.id)
+        {
+            this.props.deleteCurrentEntry(currentEntry)
+        }
      
     }
 
@@ -36,7 +50,8 @@ class DateEntryList extends React.Component {
                                     />
                                     <TrainingItem 
                                         item={entry.trainingItem}
-                                        addTrainingItem={this.addItem}/>
+                                        addTrainingItem={this.addItem}
+                                        deleteTrainingItem={this.deleteItem}/>
                                 </td>
                             )}                   
                         </tr>
@@ -55,5 +70,5 @@ const mapStateToProps = (state) => {
 
 export default connect(
     mapStateToProps,
-    {dateEntryCreation }
+    {dateEntryCreation, updateCurrentEntry, deleteCurrentEntry }
 )(DateEntryList)

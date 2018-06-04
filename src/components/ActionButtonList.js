@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Table } from 'react-bootstrap'
-import { updateCurrentEntry } from './../reducers/DateReducer'
+import { updateCurrentEntryType } from './../reducers/DateReducer'
  
 
 const ActionButtonList = (props) => (
@@ -11,7 +11,7 @@ const ActionButtonList = (props) => (
                 {props.actionEntries.map(entry =>
                     <tr key={entry.id}>
                         <td>
-                            <button onClick={() => props.updateCurrentEntry(entry.type)}>{entry.type}</button>
+                            <button onClick={() => props.updateCurrentEntryType(entry.type)}>{entry.type}</button>
                         </td>
                     </tr>
                 )}                   
@@ -28,5 +28,5 @@ const mapStateToProps = (state) => {
 
 export default connect(
     mapStateToProps,
-    {updateCurrentEntry }
+    {updateCurrentEntryType }
 )(ActionButtonList)

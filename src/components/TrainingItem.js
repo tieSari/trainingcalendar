@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TrainingItem = ({ item, addTrainingItem }) => {
+const TrainingItem = ({ item, addTrainingItem, deleteTrainingItem }) => {
 
     return (
         <div>
@@ -9,6 +9,7 @@ const TrainingItem = ({ item, addTrainingItem }) => {
                 <input name="time" value={item != null && item.time} readOnly />
                 <button>Save</button>
             </form>
+            <button onClick={deleteTrainingItem}>Delete</button>
         </div>
     )
 }
