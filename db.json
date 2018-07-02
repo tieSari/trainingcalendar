@@ -1,76 +1,11 @@
 {
   "entries": [
     {
-      "type": "Orienteering",
-      "time": "0",
-      "dayId": 1,
-      "week": 20,
-      "year": 2018,
-      "id": 2
-    },
-    {
       "type": "Running",
-      "time": "0",
-      "dayId": 6,
-      "week": 22,
-      "year": 2018,
-      "id": 3
-    },
-    {
-      "type": "Spinning",
-      "time": "0",
       "dayId": 1,
-      "week": 23,
+      "week": 27,
       "year": 2018,
-      "id": 4
-    },
-    {
-      "type": "Orienteering",
-      "time": "0",
-      "dayId": 1,
-      "week": 23,
-      "year": 2018,
-      "id": 5
-    },
-    {
-      "type": "Gym",
-      "time": "0",
-      "dayId": 1,
-      "week": 23,
-      "year": 2018,
-      "id": 6
-    },
-    {
-      "type": "Circuit",
-      "time": "0",
-      "dayId": 1,
-      "week": 23,
-      "year": 2018,
-      "id": 7
-    },
-    {
-      "type": "Orienteering",
-      "time": 0,
-      "dayId": 1,
-      "week": 23,
-      "year": 2018,
-      "id": 8
-    },
-    {
-      "type": "Spinning",
-      "time": 0,
-      "dayId": 1,
-      "week": 23,
-      "year": 2018,
-      "id": 9
-    },
-    {
-      "type": "Spinning",
-      "time": 0,
-      "dayId": 1,
-      "id": 10,
-      "week": 23,
-      "year": 2018
+      "id": 1
     }
   ]
 }

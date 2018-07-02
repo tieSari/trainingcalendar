@@ -87,6 +87,9 @@ const dateReducer = (state = initalState, action) => {
     case 'INIT_ENTRIES':
     // return action.data
     {
+        state.map(day => day.trainingItem = 
+            action.data.filter(p => p.dayId === day.id)[0])
+
         const currentDay = state.find(d => d.id === today)
         console.log(currentDay, 'current')
         const changedDay = {...currentDay, current : true}
@@ -140,8 +143,7 @@ export const initializeDateEntries = () => {
         console.log(entries, 'entries')
         dispatch({
             type: 'INIT_ENTRIES',
-            data: initalState.map(day => day.trainingItem = 
-                entries.filter(p => p.dayId === day.id && p.week === thisWeek && p.year === thisYear))
+            data: entries
         })
     }
 }
